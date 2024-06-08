@@ -19,10 +19,12 @@ def main():
     name1 = get_name()
     house1 = get_house()
     student2 = get_student2()
+    if student2['name2'] == "Jose":
+        student2['house2'] = "Riverside"
 
     print(f"{student[0]} from {student[1]}")
     print(f"{name1} from {house1}")
-    print(f"{student2['name2']} from {student2['house2']}")
+    print(f"{student2["name2"]} from {student2["house2"]}")
 
 
 def get_student():
@@ -32,10 +34,9 @@ def get_student():
 
 
 def get_student2():
-    student2 = {}
-    student2["name2"] = input("Name2: ")
-    student2["house2"] = input("House2: ")
-    return student2
+    name2 = input("Name2: ")
+    house2 = input("House2: ")
+    return {"name2": name2, "house2": house2}
 
 
 """
