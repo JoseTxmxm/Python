@@ -53,6 +53,6 @@ moneda_a_convertir = input(
 
 """
 Invoque la funcion y envie los valores almacenados
-en las vairbles moneda_actual, valor y moneda_a_convertir
+en las variables moneda_actual, valor y moneda_a_convertir
 """
 conversor(moneda_actual, valor, moneda_a_convertir)
