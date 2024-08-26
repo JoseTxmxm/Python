@@ -11,27 +11,27 @@ def conversor(moneda_actual, valor, moneda_a_convertir):
     if moneda_actual == 1:
 #Subfuncion a ejecutar si se selecciono 1 para convertir a dolares
         def dolarTo():
-            if moneda_actual == "1":
-                print(f'{valor} dolares equivalen a ${valor * 3750} pesos colombianos')
+            if moneda_a_convertir == "1":
+                print(f'${valor} dolares equivalen a ${valor * 3750.0:.2f} pesos colombianos')
             elif moneda_a_convertir == "2":
-                print(f'${valor} dolares equivale a Y{valor * 6.37} yuanes')
+                print(f'${valor} dolares equivale a Y{valor * 6.37:.2f} yuanes')
             elif moneda_a_convertir == "3":
-                print(f'${valor} dolares equivales a £{valor * 0.76} libras esterlinas')
+                print(f'${valor} dolares equivales a £{valor * 0.76:.2f} libras esterlinas')
             else:
                 print("No se reconoce la moneda_a_convertir")
 
         dolarTo()
 
-    elif moneda_a_convertir == "1":
+    elif moneda_actual == 2:
 
 #Subfuncion a ejecutar si se selecciono 2 para convertir a euros
         def euroTo():
-            if moneda_a_convertir == "2":
-                print(f'E{valor} euros equivales a ${valor * 4000} pesos colombianos')
+            if moneda_a_convertir == "1":
+                print(f'${valor} euros equivales a ${valor * 4000.0:.2f} pesos colombianos')
             elif moneda_a_convertir == "2":
-                print(f'E{valor} euros equivale a Y{valor * 6.93} yuanes')
+                print(f'${valor} euros equivale a Y{valor * 6.93:.2f} yuanes')
             elif moneda_a_convertir == "3":
-                print(f'E{valor} euros equivales a ${valor * 0.83} libras esterlinas')
+                print(f'${valor} euros equivales a ${valor * 0.83:.2f} libras esterlinas')
             else:
                 print("No se reconoce la moneda_a_convertir")
 
@@ -48,7 +48,7 @@ valor = float(input("Ingrese el valor a convertir: \n"))
 
 #Indique a que valor quierer convertir la moneda
 moneda_a_convertir = input(
-    "¿A qué moneda quiere conertirlo \n 1. Pesos colombianos"
+    "¿A qué moneda quiere conertirlo? \n 1. Pesos colombianos"
     "\n 2. Yuanes \n 3. Libras Esterlinas \n")
 
 """
